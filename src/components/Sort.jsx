@@ -3,14 +3,20 @@ import React from "react";
 const Sort = () => {
   const [sort, setSort] = React.useState(0);
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isUp, settIsUp] = React.useState(true);
+  // const [isUp, setIsUp] = React.useState(true);
   const sortTypes = ["популярности", "цене", "алфавиту"];
+  let svgRef = React.useRef(null);
+  // console.log(svgRef);
+  function clickSvgHandler() {
+    console.log(svgRef);
+  }
   return (
     <div className="sort">
       <div className="sort__label">
         <svg
-          onClick={() => settIsUp((prev) => !prev)}
-          className={isUp === false ? "sortSvg sortSvg__down" : "sortSvg"}
+          onClick={() => setIsOpen(!isOpen)}
+          ref={svgRef}
+          className={isOpen === false ? "sortSvg" : "sortSvg sortSvg__down"}
           width="10"
           height="6"
           viewBox="0 0 10 6"
