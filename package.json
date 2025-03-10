@@ -12,6 +12,7 @@
   "dependencies": {
     "jquery": "^3.7.1",
     "react": "^19.0.0",
+    "react-content-loader": "^7.0.2",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
